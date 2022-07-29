@@ -1,0 +1,170 @@
+/* background of the menu bar */
+
+.wrapper-box {
+    margin: 3em auto;
+    padding: 1em;
+    background-image: url(../Images/indexbg.png)
+  }
+
+.block {
+   display: block;
+   width: 100%;
+   background-color: #7a8b953c;
+   cursor: pointer;
+   text-align: center;
+   margin: 5px;
+   height: 10em;
+   font-family: Bae_font;
+   font-size: xx-large;
+   font-weight: bold;
+}
+
+.block:hover {
+    background-color: #ddd;
+    color: black;
+  }
+
+.block a{
+  background-image: url(/Images/indexbg1.jfif);
+}
+
+.back{
+  display: block;
+  background-color: #b5b5b53c;
+  cursor: pointer;
+  height: 5em;
+  width: auto;
+  text-align: center;
+  font-family: Bae_font;
+  font-weight: bold;
+  background: url("../Images/Back.png");
+}
+
+.TopText{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+#Box {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: left;
+  align-content:space-between;
+  border: 3px solid rgb(59, 119, 59);
+  padding: 10px;
+  background-color: rgb(207, 207, 207);
+}
+
+.InfoBox {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: left;
+  align-content:space-between;
+  border: 3px solid rgb(59, 119, 59);
+  padding: 3em;
+  background-color: rgb(207, 207, 207);
+}
+
+@font-face {
+  font-family: Bae_font;
+  src: url(../Images/Baefont_normal-Regular_V1.ttf);
+}
+
+body { /* other screen size */
+  background-color: rgb(180, 180, 180);
+  font-family: Bae_font;
+  font-size: xx-large;
+}
+
+header{
+  margin-top: 2em;
+  background-color: rgb(180, 180, 180);
+  font-family: Bae_font;
+  font-size: xx-large;
+}
+
+/* Image Button */
+.container {
+  position: relative;
+  width: 100%;
+}
+
+.container img {
+  width: 100%;
+  height: auto;
+}
+
+.container .btn {
+  position: absolute;
+  transform: translate(-50%, -50%); 
+  -ms-transform: translate(-50%, -50%);
+  background-color: rgb(85, 85, 85);
+  color: white;
+  font-size: 16px;
+  padding: 12px 24px;
+  border: none;
+  cursor: pointer;
+  border-radius: 30%;
+  text-align: center;
+}
+
+.container .btn:hover {
+  background-color: black;
+}
+
+.PopUpBG{
+  filter: blur(8px);
+}
+
+@media screen and (max-width: 1440px) { /*screen with < 960px*/
+  body {
+    background-color: red;
+    font-size: x-larger;
+  }
+  .block{
+    height: 200px;
+  }
+  .block:hover{
+    height: 200px;
+  }
+  .container .btn{
+    width: 5em;
+    height: auto;
+  }
+}
+
+@media screen and (max-width: 720px) { /*screen with < 768px*/
+  body {
+    background-color: blue;
+    font-size: larger;
+  }
+  #Box {
+    flex-direction: column;
+  }
+  .container .btn{
+    width: 3em;
+    height: auto;
+  }
+}
+
+@media screen and (max-width: 540px) { /*screen with < 320px*/
+  body {
+    background-color: green;
+    font-size: large;
+  }
+  #Box {
+    flex-direction: column;
+  }
+  .container .btn{
+    width: 2em;
+    height: auto;
+  }
+}
+
+
+
