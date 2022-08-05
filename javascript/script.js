@@ -20,7 +20,7 @@ document.querySelectorAll('.Vid-Popup').forEach( ele=> {
 //change page function
 function PopupVid(evt){
     //lets the clickedEle be the target of evt which was passed in when clicked
+    document.getElementById('ExtendContainer').classList.replace('container', 'newcontainer');
     let clickedEle  = evt.currentTarget;
-    //change the page with the data stored in the data-url
-    window.location.href=clickedEle.getAttribute("data-url");
+    let Video = document.getElementById('PopUpVid').src = clickedEle.getAttribute("data-url");
 }

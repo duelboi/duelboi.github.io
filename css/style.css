@@ -28,17 +28,6 @@
   background-image: url(/Images/indexbg1.jfif);
 }
 
-.back{
-  display: block;
-  background-color: #b5b5b53c;
-  cursor: pointer;
-  height: 5em;
-  width: auto;
-  text-align: center;
-  font-family: Bae_font;
-  font-weight: bold;
-  background: url("../Images/Back.png");
-}
 
 .TopText{
     display: flex;
@@ -46,6 +35,12 @@
     justify-content: center;
     align-items: center;
     flex-wrap: wrap;
+}
+
+.PopUpFG{
+  position: absolute;
+  width: 100%;
+  top: 150%;
 }
 
 #Box {
@@ -69,6 +64,8 @@
   border: 3px solid rgb(59, 119, 59);
   padding: 3em;
   background-color: rgb(207, 207, 207);
+  animation-name: Fromleft;
+  animation-duration: 1s;
 }
 
 @font-face {
@@ -77,16 +74,18 @@
 }
 
 body { /* other screen size */
-  background-color: rgb(180, 180, 180);
+  background-color: rgb(51, 51, 51);
   font-family: Bae_font;
   font-size: xx-large;
 }
 
 header{
   margin-top: 2em;
-  background-color: rgb(180, 180, 180);
+  color: rgb(207, 207, 207);
   font-family: Bae_font;
   font-size: xx-large;
+  animation-name: Fromleft;
+  animation-duration: 1s;
 }
 
 /* Image Button */
@@ -95,16 +94,8 @@ header{
   width: 100%;
 }
 
-.container img {
-  width: 100%;
-  height: auto;
-}
 
-.container .btn {
-  position: absolute;
-  transform: translate(-50%, -50%); 
-  -ms-transform: translate(-50%, -50%);
-  background-color: rgb(85, 85, 85);
+.btn {
   color: white;
   font-size: 16px;
   padding: 12px 24px;
@@ -112,15 +103,29 @@ header{
   cursor: pointer;
   border-radius: 30%;
   text-align: center;
+  outline: none;
+  background-color: #04AA6D;
+  border: none;
+  border-radius: 15px;
+  box-shadow: 0 9px #999;
 }
 
-.container .btn:hover {
+.btn:hover {
   background-color: black;
 }
 
-.PopUpBG{
-  filter: blur(8px);
+.btn:active {
+  background-color: #525852;
+  box-shadow: 0 5px #666;
+  transform: translateY(4px);
 }
+
+.newcontainer {
+  position: relative;
+  width: 100%;
+  margin-bottom: 60%;
+}
+
 
 @media screen and (max-width: 1440px) { /*screen with < 960px*/
   body {
@@ -147,9 +152,11 @@ header{
   #Box {
     flex-direction: column;
   }
-  .container .btn{
-    width: 3em;
+  .btn{
+    width: 4em;
     height: auto;
+    font-size: x-small;
+    text-align: left;
   }
 }
 
@@ -161,10 +168,17 @@ header{
   #Box {
     flex-direction: column;
   }
-  .container .btn{
-    width: 2em;
+  .btn{
+    width: 3em;
     height: auto;
+    font-size: xx-small;
+    text-align: left;
   }
+}
+
+@keyframes Fromleft {
+  0% {opacity: 0; transform: translateX(-200px);}
+  100% {opacity: 1; transform: translateX(0);}
 }
 
 
