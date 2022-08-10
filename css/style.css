@@ -1,10 +1,64 @@
 /* background of the menu bar */
 
-.wrapper-box {
+#wrapper-box {
     margin: 3em auto;
     padding: 1em;
-    background-image: url(../Images/indexbg.png)
   }
+
+#MenuBar{
+  position: fixed;
+  top: 4%;
+  left: 3%;
+  z-index: 100;
+}
+
+#MenuBarBG{
+  position: fixed;
+  z-index: 98;
+  top: 0%;
+  left: 0%;
+  width: 100%;
+  height: 10%;
+  background-color: rgb(40, 40, 40);
+}
+
+#SetMenu{
+  display: none;
+}
+
+
+.MenuBox{
+  z-index: -2;
+  position: fixed;
+  width: 20%;
+  background-color: rgb(40, 40, 40);
+  top: 0%;
+  left: -5%;
+  height: 100%;
+  padding-top: 5%;
+  padding-left: 5%;
+  display: block;
+  column-count: 1;
+  animation-name: Fromleft;
+  animation-duration: 1s;
+}
+
+.MenuOption{
+  width: 100%;
+  cursor: pointer;
+  text-align: center;
+  font-size: x-large;
+  font-weight: bold;
+  height: 10%;
+  background-color: rgb(40, 40, 40);
+  border: none;
+  color: white;
+}
+
+#Description{
+  margin-left: auto;
+  font-style: normal;
+}
 
 .block {
    display: block;
@@ -14,7 +68,7 @@
    text-align: center;
    margin: 5px;
    height: 10em;
-   font-family: Bae_font;
+   font-family:'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
    font-size: xx-large;
    font-weight: bold;
 }
@@ -29,7 +83,7 @@
 }
 
 
-.TopText{
+#TopText{
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -41,6 +95,22 @@
   position: absolute;
   width: 100%;
   top: 150%;
+}
+
+.PopUpText{
+  width: 20em;
+  height: auto;
+  border-color: black;
+  background-color: white;
+  color: black;
+  border-radius: 25px;
+  height: 3em;
+  padding-left: 1rem;
+  padding-right: 1rem;
+  display: none;
+  margin-top: 1em;
+  animation-name: Fadein;
+  animation-duration: 2s;
 }
 
 #Box {
@@ -56,10 +126,9 @@
 
 .InfoBox {
   display: flex;
-  flex-direction: row;
+  flex-direction: column;
   flex-wrap: wrap;
-  justify-content: center;
-  align-items: left;
+  justify-content: left;
   align-content:space-between;
   border: 3px solid rgb(59, 119, 59);
   padding: 3em;
@@ -68,24 +137,31 @@
   animation-duration: 1s;
 }
 
-@font-face {
-  font-family: Bae_font;
-  src: url(../Images/Baefont_normal-Regular_V1.ttf);
+.InfoBox img{
+  width: 30%;
+  height: auto;
+  margin-left: auto;
+  margin-right: auto;
+  object-fit: fill;
 }
 
 body { /* other screen size */
-  background-color: rgb(51, 51, 51);
-  font-family: Bae_font;
-  font-size: xx-large;
+  background-color: rgb(87, 87, 87);
+  font-family:'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+  font-size: x-large;
 }
 
 header{
   margin-top: 2em;
   color: rgb(207, 207, 207);
-  font-family: Bae_font;
+  justify-content: center;
+  font-family:'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
   font-size: xx-large;
   animation-name: Fromleft;
   animation-duration: 1s;
+  background-image: url("../Images/PoppingTitle.jpg");
+  background-size: 100%;
+  background-repeat: no-repeat;
 }
 
 /* Image Button */
@@ -110,6 +186,8 @@ header{
   box-shadow: 0 9px #999;
 }
 
+
+
 .btn:hover {
   background-color: black;
 }
@@ -127,7 +205,7 @@ header{
 }
 
 
-@media screen and (max-width: 1440px) { /*screen with < 960px*/
+@media screen and (max-width: 1440px) { /*screen with < 1440px*/
   body {
     background-color: red;
     font-size: x-larger;
@@ -139,12 +217,11 @@ header{
     height: 200px;
   }
   .container .btn{
-    width: 5em;
     height: auto;
   }
 }
 
-@media screen and (max-width: 720px) { /*screen with < 768px*/
+@media screen and (max-width: 720px) { /*screen with < 720px*/
   body {
     background-color: blue;
     font-size: larger;
@@ -152,27 +229,60 @@ header{
   #Box {
     flex-direction: column;
   }
+  .MenuBox{
+    padding-top: 10%;
+  }
+  .MenuOption{
+    font-size: larger;
+  }
   .btn{
-    width: 4em;
     height: auto;
     font-size: x-small;
-    text-align: left;
+    text-align: center;
+  }
+  header{
+    font-size: x-large;
+    background-image: url("");
+  }
+  .InfoBox img{
+    width: 75%;
+    height: auto;
+  }
+  header {
+    margin-top: 3em;
   }
 }
 
-@media screen and (max-width: 540px) { /*screen with < 320px*/
+@media screen and (max-width: 540px) { /*screen with < 540px*/
   body {
     background-color: green;
-    font-size: large;
+    font-size:  medium;
+  }
+  .MenuBox{
+    padding-top: 13%;
+    width: 30%;
+  }
+  .MenuOption{
+    font-size: medium;
   }
   #Box {
     flex-direction: column;
   }
   .btn{
-    width: 3em;
     height: auto;
     font-size: xx-small;
     text-align: left;
+  }
+  header{
+    font-size: large;
+    background-image: url("");
+  }
+  .InfoBox img{
+    width: 100%;
+    height: auto;
+  }
+  header {
+    margin-top: 5em;
   }
 }
 
@@ -181,5 +291,9 @@ header{
   100% {opacity: 1; transform: translateX(0);}
 }
 
+@keyframes Fadein{
+  0%{opacity: 0%;}
+  100%{opacity: 100%;}
+}
 
 
