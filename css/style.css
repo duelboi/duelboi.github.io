@@ -270,12 +270,16 @@ header{
   }
   .btn{
     height: auto;
+    margin-bottom: 3%;
     font-size: xx-small;
     text-align: left;
   }
   header{
     font-size: large;
     background-image: url("");
+  }
+  .InfoBox{
+    padding-right: 5%;
   }
   .InfoBox img{
     width: 100%;
