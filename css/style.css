@@ -310,8 +310,6 @@ header{
   header{
     font-size: large;
     background-image: url("");
-  }
-  header {
     margin-top: 5em;
   }
   .InfoBox video{
@@ -319,9 +317,6 @@ header{
   }
   .PopUpText{
     font-size: small;
-  }
-  .newcontainer{
-    margin-bottom: 5em;
   }
 }
 
