@@ -79,3 +79,31 @@ function FunFactPopUp(evt){
         popuptext.style.display = "block";
     }
 }
+
+//Choose which country
+document.querySelectorAll('.Country').forEach( ele=> {
+    ele.addEventListener("click", ChooseCountry);
+});
+
+function ChooseCountry(evt){
+    let clickedEle =  evt.currentTarget;
+    console.log(1)
+    if(clickedEle.name === "America"){
+        console.log("2")
+        document.getElementById("America").style.display = "block";
+        document.getElementById("Europe").style.display = "none";
+        document.getElementById("Asia").style.display = "none";
+    }
+    if(clickedEle.name === "Europe"){
+        console.log("2")
+        document.getElementById("Europe").style.display = "block";
+        document.getElementById("America").style.display = "none";
+        document.getElementById("Asia").style.display = "none";
+    }
+    if(clickedEle.name === "Asia"){
+        console.log("2")
+        document.getElementById("Asia").style.display = "block";
+        document.getElementById("America").style.display = "none";
+        document.getElementById("Europe").style.display = "none";
+    }
+}

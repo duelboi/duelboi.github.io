@@ -179,6 +179,9 @@ header{
   width: 100%;
 }
 
+.ButtonContainer{
+  width: 100%;
+}
 
 .btn {
   color: white;
@@ -197,7 +200,6 @@ header{
 }
 
 
-
 .btn:hover {
   background-color: black;
 }
@@ -214,10 +216,30 @@ header{
   margin-bottom: 60%;
 }
 
+#America{
+  display: none;
+  animation-name: Fadein;
+  animation-duration: 1s;
+  margin-bottom: 2em;
+}
+
+#Europe{
+  display: none;
+  animation-name: Fadein;
+  animation-duration: 1s;
+  margin-bottom: 2em;
+}
+
+#Asia{
+  display: none;
+  animation-name: Fadein;
+  animation-duration: 1s;
+  margin-bottom: 2em;
+}
+
 
 @media screen and (max-width: 1440px) { /*screen with < 1440px*/
   body {
-    background-color: red;
     font-size: x-larger;
   }
   .block{
@@ -233,7 +255,6 @@ header{
 
 @media screen and (max-width: 720px) { /*screen with < 720px*/
   body {
-    background-color: blue;
     font-size: larger;
   }
   #Box {
@@ -264,7 +285,6 @@ header{
 
 @media screen and (max-width: 540px) { /*screen with < 540px*/
   body {
-    background-color: green;
     font-size:  medium;
   }
   .MenuBox{
