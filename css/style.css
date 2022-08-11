@@ -317,11 +317,11 @@ header{
   .InfoBox video{
     width: 100%;
   }
-  .FactContainer{
-    font-size: medium;
+  .PopUpText{
+    font-size: small;
   }
   .newcontainer{
-    padding-bottom: 3em;
+    padding-bottom: 4em;
   }
 }
 
