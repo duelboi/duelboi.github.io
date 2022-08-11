@@ -123,7 +123,6 @@
   display: flex;
   flex-direction: row;
   justify-content: center;
-  align-items: left;
   align-content:space-between;
   border: 3px solid rgb(59, 119, 59);
   padding: 10px;
@@ -244,7 +243,7 @@ header{
 
 @media screen and (max-width: 1440px) { /*screen with < 1440px*/
   body {
-    font-size: x-larger;
+    font-size:x-large;
   }
   .block{
     height: 200px;
